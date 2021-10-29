@@ -11,6 +11,10 @@ public class Student {
 
     @Override
     public String toString() {
+        if (name=="")
+        {
+            throw new NullPointerException();
+        }
         Formatter f=new Formatter();
         f.format("%9s: %2s",name,id);
         return f.toString();
